@@ -1,3 +1,6 @@
+//побитовая упаковка чисел от 0 до 17
+//три числа по пять бит в два байта
+
 #include <iostream>
 
 void package(unsigned int left, unsigned int middle, unsigned int right)
