@@ -113,6 +113,4 @@ void changeText(int letters[8])
 int main()
 {
 	changeText(maxLetters(sortAlphabet(readFile())));
-
-	std::cout << "End of programme.";
 }
