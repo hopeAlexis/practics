@@ -22,7 +22,6 @@ private:
 	void wordCount(const std::string& message)		//counts words in a message (until there's a " ")
 	{
 		int helper = 0;
-		std::cout << message.length() << "\n";
 		for (size_t i = 0; i < message.length(); i++)
 		{
 			if (message[i] != ' ')		//so that we don't count a " " + " " as a word 
@@ -33,13 +32,11 @@ private:
 			{
 				if (helper != 0)
 				{
-					std::cout << helper << " ";
 					helper = 0;
 					c_wordAmount++;
 				}
 			}
 		}
-		std::cout << "amount of words: " << c_wordAmount;
 	}
 
 
@@ -144,6 +141,7 @@ public:
 
 	void messageOutput()
 	{
+		std::cout << "The message: ";
 		for (size_t i = 0; i < c_wordAmount; i++)
 		{
 			std::cout << c_words[i] << " ";
@@ -166,9 +164,11 @@ int main()
 		cipher.keyInput();
 		cipher.encode();
 		cipher.messageOutput();
+		cipher.keyOutput();
 		cipher.decode();
 		cipher.messageOutput();
 	}
 	catch (std::string message) {
 		std::cout << message;
+	}
 }
