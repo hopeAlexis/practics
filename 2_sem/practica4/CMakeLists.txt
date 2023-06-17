@@ -12,5 +12,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 
 include_directories("inc/")			 # указываем, где искать файлы заголовков
 
-add_executable("${PROJECT_NAME}" practica4_2.cpp
-				 appliances.txt)	# добавить исполняемый файл
+add_executable("${PROJECT_NAME}" practica4_2.cpp)	# добавить исполняемый файл
+file(COPY appliances.txt DESTINATION "/")	# скопировать файл text.txt в корневую папку проекта
